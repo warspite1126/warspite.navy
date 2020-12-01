@@ -1,0 +1,10 @@
+#mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+#mainDiv > img {
+  height: 6em;
+}
