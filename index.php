@@ -11,7 +11,7 @@
 
 <body>
   <!-- <script src="assets/include/header.js"></script> -->
-  <?php include(dirname(__FILE__).'./assets/include/header.php'); ?>
+  <?php include(dirname(__FILE__).'/assets/include/header.php'); ?>
   <div id="mainDiv">
     <img src="assets/img/BiggerThanAtoms.svg">
   </div>
