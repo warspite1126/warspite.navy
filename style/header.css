@@ -16,7 +16,7 @@ header {
 }
 
 .title img {
-  height: 3em;
+  height: 2.4em;
 }
 
 .noDecoration02 {
@@ -26,8 +26,9 @@ header {
 
 header > nav {
   margin-left: auto;
-  background: #363636;
-  border-radius: 0.6em;
+  /* background: #363636; */
+  box-shadow: 0 0 0.4em grey;
+  border-radius: 0.4em;
 }
 
 header > nav > ul {
@@ -35,18 +36,32 @@ header > nav > ul {
   display: flex;
 }
 
-header > nav > ul > a > li {
+.navLi > li {
   margin: 0 1.5em;
   font-size: 1.1em;
-  font-weight: 700;
+  /* font-weight: 700; */
+  color: black;
   border-radius: 0.2em;
-  padding: 0.7em;
+  padding: 0.6em 0.2em;
 }
 
-.navLi:hover {
-  background: #f0f0f040;
+@keyframes li_hover {
+  100% {
+    background: #68686840;
+  }
 }
 
-.b01 {
-  border-right: 0.1em solid #ffffff9f;
+header > nav > ul > a:hover {
+  animation-name: li_hover;
+  animation-duration: 0.3s;
+  /* animation-timing-function: ease; */
+  animation-fill-mode: forwards;
+}
+
+.header_li_left {
+  border-radius: 0.4em 0 0 0.4em;
+}
+
+.header_li_right {
+  border-radius: 0 0.4em 0.4em 0;
 }

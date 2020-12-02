@@ -1,10 +1,14 @@
-#mainDiv {
+#wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
 }
 
-#mainDiv > img {
-  height: 6em;
+#svgDiv {
+  margin-top: 12em;
+  background-image: url('/assets/img/BiggerThanAtoms.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 5em;
+  width: 100%;
 }
