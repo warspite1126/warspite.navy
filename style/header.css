@@ -1,48 +1,61 @@
-header {
+#page_header {
   /* position: fixed; */
   top: 0;
   width: 100%;
 
-  padding: 0.4em 4%;
-
   display: flex;
   align-items: center;
+
+  margin-top: 1em;
 }
 
 .title {
   text-decoration: none;
   color: #202020;
-  margin-top: 1em;
 }
 
-.title img {
-  height: 2.4em;
+@media only screen and (max-width: 694px) {
+  #page_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #page_header > nav {
+    display: none;
+  }
+  .title img {
+    height: 1.8em;
+  }
 }
 
-.noDecoration02 {
-  text-decoration: none;
-  color: #f0f0f0;
+@media only screen and (min-width: 695px) {
+  #page_header {
+    padding: 0.4em 4%;
+  }
+  .title img {
+    height: 2.4em;
+  }
 }
 
-header > nav {
+#page_header > nav {
   margin-left: auto;
   /* background: #363636; */
   box-shadow: 0 0 0.4em grey;
   border-radius: 0.4em;
 }
 
-header > nav > ul {
+#page_header > nav > ul {
   list-style: none;
   display: flex;
 }
 
 .navLi > li {
-  margin: 0 1.5em;
-  font-size: 1.1em;
+  /* margin: 0 0.4em; */
+  font-size: 1.2em;
   /* font-weight: 700; */
   color: black;
   border-radius: 0.2em;
-  padding: 0.6em 0.2em;
+  padding: 0.6em 0.8em;
 }
 
 @keyframes li_hover {
@@ -51,7 +64,7 @@ header > nav > ul {
   }
 }
 
-header > nav > ul > a:hover {
+#page_header > nav > ul > a:hover {
   animation-name: li_hover;
   animation-duration: 0.3s;
   /* animation-timing-function: ease; */
