@@ -5,9 +5,13 @@
         <img src="/warspite-navy-white.svg" class="header-logo" />
       </v-toolbar-title>
       <v-spacer />
-      <v-app-bar-nav-icon @click="drawer = true" />
+      <!-- <v-app-bar-nav-icon @click="drawer = true" /> -->
+      <!-- <label for="drawerCheckbox">
+        <div class="v-icon mdi mdi-menu" />
+      </label>
+      <label class="drawer-overlay" for="drawerCheckbox"></label> -->
 
-      <v-tabs v-if="!nav" right color="light-green">
+      <v-tabs class="tb_tab" right color="light-green">
         <v-tab
           v-for="(menuItem, index) in menuItems"
           :key="index"
@@ -18,8 +22,9 @@
       </v-tabs>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" fixed temporary right>
-      <v-list nav dense>
+    <!-- <input id="drawerCheckbox" class="drawer-checkbox" type="checkbox" hidden /> -->
+    <!-- <v-navigation-drawer v-model="drawer" fixed temporary right>
+      <v-list nav dense class="navigation-list">
         <v-list-item-group>
           <v-list-item
             v-for="(menuItem, index) in menuItems"
@@ -32,9 +37,18 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
 
     <v-main>
+      <v-tabs class="sp-tab" show-arrows dark color="light-green">
+        <v-tab
+          v-for="(menuItem, index) in menuItems"
+          :key="index"
+          :to="menuItem.to"
+        >
+          {{ menuItem.name }}
+        </v-tab>
+      </v-tabs>
       <v-container>
         <nuxt />
       </v-container>
@@ -82,17 +96,59 @@ export default {
   height: 1.6em;
 }
 
-.v-app-bar__nav-icon {
-  @include bp-tb {
-    display: none !important;
-  }
-}
-
-.v-tabs {
+.tb_tab {
   display: none;
 
   @include bp-tb {
     display: block !important;
   }
 }
+
+.sp-tab {
+  @include bp-tb {
+    display: none !important;
+  }
+}
+
+// .v-app-bar {
+//   z-index: 2;
+// }
+// .v-main {
+//   z-index: 1;
+// }
+
+// .drawer-icon {
+//   @include bp-tb {
+//     display: none !important;
+//   }
+// }
+// .drawer-overlay {
+//   position: fixed;
+
+//   width: 100%;
+//   height: 100%;
+
+//   display: none;
+//   opacity: 0;
+//   background: black;
+
+//   pointer-events: none;
+// }
+
+// .navigation-list {
+//   display: none;
+//   z-index: 3;
+//   position: fixed;
+//   width: 20em;
+
+//   left: auto;
+//   right: auto;
+// }
+// #drawerCheckbox:checked ~ .navigation-list {
+//   display: block;
+// }
+
+// .v-navigation-drawer {
+//   display: block;
+// }
 </style>
