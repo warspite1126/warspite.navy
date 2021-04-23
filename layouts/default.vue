@@ -1,13 +1,13 @@
 <template>
-  <v-app v-resize="onResize">
-    <v-app-bar app dense>
-      <v-toolbar-title class="ml-4 overflow-visible">
-        warspite.navy
+  <v-app>
+    <v-app-bar app dark>
+      <v-toolbar-title class="ml-4 overflow-visible d-flex align-center">
+        <img src="/warspite-navy-white.svg" class="header-logo" />
       </v-toolbar-title>
       <v-spacer />
-      <v-app-bar-nav-icon v-if="nav" @click="drawer = true" />
+      <v-app-bar-nav-icon @click="drawer = true" />
 
-      <v-tabs v-if="!nav" right>
+      <v-tabs v-if="!nav" right color="light-green">
         <v-tab
           v-for="(menuItem, index) in menuItems"
           :key="index"
@@ -26,14 +26,18 @@
             :key="index"
             :to="menuItem.to"
           >
-            <v-list-item-title> {{ menuItem.name }} </v-list-item-title>
+            <v-list-item-title class="text-uppercase">
+              {{ menuItem.name }}
+            </v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
 
     <v-main>
-      <nuxt />
+      <v-container>
+        <nuxt />
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -46,7 +50,7 @@ export default {
       nav: false,
       menuItems: [
         {
-          name: 'index',
+          name: 'home',
           to: '/',
         },
         {
@@ -60,9 +64,6 @@ export default {
       ],
     }
   },
-  mounted() {
-    this.onResize()
-  },
   methods: {
     onResize() {
       if (window.innerWidth <= 768) {
@@ -75,3 +76,23 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.header-logo {
+  height: 1.6em;
+}
+
+.v-app-bar__nav-icon {
+  @include bp-tb {
+    display: none !important;
+  }
+}
+
+.v-tabs {
+  display: none;
+
+  @include bp-tb {
+    display: block !important;
+  }
+}
+</style>

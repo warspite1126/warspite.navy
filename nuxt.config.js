@@ -2,7 +2,7 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -40,7 +40,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // '@nuxtjs/svg',
+    'nuxt-svg-loader',
   ],
+
+  // router: {
+  //   middleWare: ['disable-direct-access'],
+  // },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
