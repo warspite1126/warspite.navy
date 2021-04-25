@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <img src="/bh.png" />
     <h1 v-if="error.statusCode === 404">
       {{ pageNotFound }}
     </h1>

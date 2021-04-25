@@ -1,8 +1,12 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <index-image />
-      <news />
+      <v-col cols="8" style="background: red">
+        <index-image />
+      </v-col>
+      <v-col cols="4" style="background: red">
+        <news />
+      </v-col>
     </v-row>
   </v-container>
 </template>

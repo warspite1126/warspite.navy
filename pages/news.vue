@@ -1,5 +1,5 @@
 <template>
-  <v-card width="20em" class="fill-height">
+  <v-card class="fill-height mx-2">
     <v-card-title class="text-capitalize justify-center">news</v-card-title>
     <v-card-text>
       <v-list flat>
@@ -40,3 +40,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.v-card {
+  min-width: 0%;
+  max-width: 48em;
+}
+</style>
