@@ -1,10 +1,10 @@
 <template>
-  <v-container>
+  <v-container class="mt-3">
     <v-row justify="center">
-      <v-col cols="8" style="background: red">
+      <v-col cols="12" sm="9" md="8" lg="7" xl="6">
         <index-image />
       </v-col>
-      <v-col cols="4" style="background: red">
+      <v-col cols="12" sm="9" md="4" lg="4" xl="3">
         <news />
       </v-col>
     </v-row>
@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import IndexImage from './index-image.vue'
-import News from './news.vue'
+import IndexImage from '~/components/index/IndexImage'
+import News from '~/components/index/News'
 export default {
   components: { News, IndexImage },
 }

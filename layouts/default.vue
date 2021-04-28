@@ -4,12 +4,8 @@
       <v-toolbar-title class="ml-4 overflow-visible d-flex align-center">
         <img src="/warspite-navy-white.svg" class="header-logo" />
       </v-toolbar-title>
+
       <v-spacer />
-      <!-- <v-app-bar-nav-icon @click="drawer = true" /> -->
-      <!-- <label for="drawerCheckbox">
-        <div class="v-icon mdi mdi-menu" />
-      </label>
-      <label class="drawer-overlay" for="drawerCheckbox"></label> -->
 
       <v-tabs class="tb_tab" right color="light-green">
         <v-tab
@@ -22,25 +18,8 @@
       </v-tabs>
     </v-app-bar>
 
-    <!-- <input id="drawerCheckbox" class="drawer-checkbox" type="checkbox" hidden /> -->
-    <!-- <v-navigation-drawer v-model="drawer" fixed temporary right>
-      <v-list nav dense class="navigation-list">
-        <v-list-item-group>
-          <v-list-item
-            v-for="(menuItem, index) in menuItems"
-            :key="index"
-            :to="menuItem.to"
-          >
-            <v-list-item-title class="text-uppercase">
-              {{ menuItem.name }}
-            </v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer> -->
-
     <v-main>
-      <v-tabs class="sp-tab" show-arrows dark color="light-green">
+      <v-tabs class="sp-tab" show-arrows fixed-tabs dark color="light-green">
         <v-tab
           v-for="(menuItem, index) in menuItems"
           :key="index"
@@ -49,9 +28,9 @@
           {{ menuItem.name }}
         </v-tab>
       </v-tabs>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <!-- <v-container> -->
+      <nuxt />
+      <!-- </v-container> -->
     </v-main>
   </v-app>
 </template>
@@ -68,12 +47,12 @@ export default {
           to: '/',
         },
         {
-          name: 'services',
-          to: '/services',
-        },
-        {
           name: 'works',
           to: '/works',
+        },
+        {
+          name: 'about me',
+          to: '/about-me',
         },
       ],
     }
