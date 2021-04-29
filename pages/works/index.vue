@@ -10,6 +10,7 @@
         :to="e.link"
       >
         <v-img :src="e.img"></v-img>
+        <noscript><img :src="e.img" style="width: 100%" /></noscript>
         <v-card-title class="text-h5" v-text="e.title"></v-card-title>
         <v-card-text class="text-body-2" v-text="e.description"></v-card-text>
       </v-card>
@@ -31,8 +32,8 @@ export default {
         {
           title: 'RedShot',
           img: '/r2.jpg',
-          description: 'サーバーサイドで銃火器',
-          link: '/',
+          description: 'Minecraft - サーバーサイドで銃火器',
+          link: '/works/redshot',
         },
         {
           title: 'KonoXa',

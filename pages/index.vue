@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import IndexImage from '~/components/index/IndexImage'
-import News from '~/components/index/News'
+import IndexImage from '~/components/index/IndexImage.vue'
+import News from '~/components/index/News.vue'
 export default {
   components: { News, IndexImage },
 }
