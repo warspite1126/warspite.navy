@@ -2,7 +2,9 @@
   <v-app>
     <v-app-bar app dark>
       <v-toolbar-title class="ml-4 overflow-visible d-flex align-center">
-        <img src="/warspite-navy-white.svg" class="header-logo" />
+        <router-link to="/" style="height: 1.6em">
+          <img src="/warspite-navy-white.svg" style="height: 1.6em" />
+        </router-link>
       </v-toolbar-title>
 
       <v-spacer />
@@ -28,9 +30,9 @@
           {{ menuItem.name }}
         </v-tab>
       </v-tabs>
-      <!-- <v-container> -->
-      <nuxt />
-      <!-- </v-container> -->
+      <v-container fluid class="pa-0">
+        <nuxt />
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -71,10 +73,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header-logo {
-  height: 1.6em;
-}
-
 .tb_tab {
   display: none;
 
@@ -88,46 +86,4 @@ export default {
     display: none !important;
   }
 }
-
-// .v-app-bar {
-//   z-index: 2;
-// }
-// .v-main {
-//   z-index: 1;
-// }
-
-// .drawer-icon {
-//   @include bp-tb {
-//     display: none !important;
-//   }
-// }
-// .drawer-overlay {
-//   position: fixed;
-
-//   width: 100%;
-//   height: 100%;
-
-//   display: none;
-//   opacity: 0;
-//   background: black;
-
-//   pointer-events: none;
-// }
-
-// .navigation-list {
-//   display: none;
-//   z-index: 3;
-//   position: fixed;
-//   width: 20em;
-
-//   left: auto;
-//   right: auto;
-// }
-// #drawerCheckbox:checked ~ .navigation-list {
-//   display: block;
-// }
-
-// .v-navigation-drawer {
-//   display: block;
-// }
 </style>

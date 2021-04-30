@@ -1,0 +1,15 @@
+/* 麗のグラデーション */
+.gradient-bg {
+  background: linear-gradient(
+    90deg,
+    #3854ee 0%,
+    #7f7fff 40%,
+    #ff47ff 80%,
+    #ff7829 100%
+  );
+}
+
+.media-shadow {
+  box-shadow: 0 0 0.3em 0.1em grey;
+  border-radius: 0.25em;
+}

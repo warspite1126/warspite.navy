@@ -19,14 +19,3 @@
     @content;
   }
 }
-
-/** 麗のグラデーション */
-.gradient-bg {
-  background: linear-gradient(
-    90deg,
-    #3854ee 0%,
-    #7f7fff 40%,
-    #ff47ff 80%,
-    #ff7829 100%
-  );
-}

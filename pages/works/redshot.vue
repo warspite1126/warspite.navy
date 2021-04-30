@@ -1,58 +1,17 @@
 <template>
-  <v-container tag="article" fluid>
-    <v-container fluid class="ma-0 pa-0">
-      <v-row justify="center">
-        <v-col
-          cols="12"
-          class="text-center white--text"
-          style="background: linear-gradient(135deg, #555, #000)"
-        >
-          <h1 class="text-h3 text-sm-h2 my-4">RedShot</h1>
-          <p class="text-h5">銃火器プラグイン</p>
-        </v-col>
-        <v-col cols="12" class="gradient-bg pa-1"></v-col>
-      </v-row>
-    </v-container>
-
-    <v-container class="mt-8">
-      <v-row justify="center">
-        <v-col
-          v-for="(e, index) in sections"
-          :key="index"
-          tag="section"
-          cols="12"
-          sm="11"
-          md="10"
-          lg="9"
-          xl="7"
-        >
-          <h2 class="text-center text-h3" v-text="e.title"></h2>
-          <p class="my-4" v-text="e.text"></p>
-          <video v-if="e.video" width="100%" controls :src="e.video" />
-          <v-car v-if="e.image">
-            <v-img :src="e.image"></v-img>
-            <noscript
-              ><img :src="e.image" alt="redshot config" style="width: 100%"
-            /></noscript>
-          </v-car>
-        </v-col>
-
-        <v-col tag="section" class="text-center mt-6 text-h4" cols="12">
-          <a
-            href="https://github.com/warspitenavy/redshot/"
-            class="text-decoration-none"
-          >
-            <v-icon x-large>mdi-github</v-icon>
-            RedShot - GitHub
-          </a>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-container>
+  <article-component
+    title="RedShot"
+    text="銃火器プラグイン"
+    :sections="sections"
+    :github="github"
+  />
 </template>
 
 <script>
-export default {
+import Vue from 'vue'
+import ArticleComponent from '~/components/works/ArticleComponent.vue'
+export default Vue.extend({
+  components: { ArticleComponent },
   data() {
     return {
       sections: [
@@ -80,19 +39,11 @@ export default {
           image: '/redshot/redshot_conf.png',
         },
       ],
+      github: {
+        text: 'redshot',
+        link: 'https://github.com/warspitenavy/redshot',
+      },
     }
   },
-}
+})
 </script>
-
-<style scoped>
-.gradient-bg {
-  background: linear-gradient(
-    90deg,
-    #3854ee 0%,
-    #7f7fff 40%,
-    #ff47ff 80%,
-    #ff7829 100%
-  );
-}
-</style>

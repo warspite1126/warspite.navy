@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mt-2">
+  <v-container class="pa-6">
     <v-row justify="center" justify-lg="start">
       <v-card
         v-for="(e, index) in works"
@@ -8,7 +8,7 @@
         min-width="0%"
         width="22em"
         min-height="0%"
-        height="18em"
+        max-height="18em"
         :to="e.link"
       >
         <noscript

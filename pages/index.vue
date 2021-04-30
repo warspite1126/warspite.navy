@@ -1,20 +1,68 @@
 <template>
-  <v-container class="mt-3">
+  <v-container class="pa-6">
     <v-row justify="center">
       <v-col cols="12" sm="9" md="8" lg="7" xl="6">
-        <index-image />
+        <v-card min-width="0%" max-width="100%" class="fill-height">
+          <v-img src="/r2_e.jpg" alt="r2_e.jpg"> </v-img>
+          <noscript>
+            <img src="/r2_e.jpg" alt="r2_e.jpg" style="width: 100%" />
+          </noscript>
+        </v-card>
       </v-col>
       <v-col cols="12" sm="9" md="4" lg="4" xl="3">
-        <news />
+        <v-card>
+          <v-card-title class="text-capitalize justify-center text-h5"
+            >news</v-card-title
+          >
+          <v-card-text>
+            <v-list>
+              <v-list-item-group>
+                <v-list-item
+                  v-for="(e, index) in news"
+                  :key="index"
+                  :to="e.link"
+                >
+                  <v-list-item-content>
+                    <v-list-item-title
+                      class="text-subtitle-1"
+                      v-text="e.title"
+                    ></v-list-item-title>
+                    <v-list-item-subtitle
+                      class="text-subtitle-1"
+                      v-text="e.date"
+                    ></v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-item-group>
+            </v-list>
+          </v-card-text>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import IndexImage from '~/components/index/IndexImage.vue'
-import News from '~/components/index/News.vue'
 export default {
-  components: { News, IndexImage },
+  data() {
+    return {
+      news: [
+        {
+          title: 'ColumbaLivia完成',
+          date: '2021.04.20',
+          link: '/works/columba-livia',
+        },
+        {
+          title: 'KonoXa稼働開始',
+          date: '2021.04.06',
+          link: '/works/konoxa',
+        },
+        {
+          title: 'Kyokotan終了',
+          date: '2021.04.06',
+        },
+      ],
+    }
+  },
 }
 </script>
