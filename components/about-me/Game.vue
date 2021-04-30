@@ -12,7 +12,7 @@
                 class="text-h6 mb-4"
                 v-text="e.title"
               ></v-list-item-title>
-              <img :src="e.image" style="width: 100%; border-radius: 0.2em" />
+              <img :src="e.image" style="width: 100%; border-radius: 1em" />
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
