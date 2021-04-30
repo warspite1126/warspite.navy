@@ -2,12 +2,7 @@
   <v-container class="pa-6">
     <v-row justify="center">
       <v-col cols="12" sm="9" md="8" lg="7" xl="6">
-        <v-card min-width="0%" max-width="100%" class="fill-height">
-          <v-img src="/r2_e.jpg" alt="r2_e.jpg"> </v-img>
-          <noscript>
-            <img src="/r2_e.jpg" alt="r2_e.jpg" style="width: 100%" />
-          </noscript>
-        </v-card>
+        <img src="/r2_e.jpg" class="media-shadow" style="width: 100%" />
       </v-col>
       <v-col cols="12" sm="9" md="4" lg="4" xl="3">
         <v-card>
