@@ -46,7 +46,7 @@ export default {
         },
         {
           title: 'warspitenavy',
-          origIcon: '/qiita.png',
+          origIcon: '/about-me/qiita.png',
           link: 'https://qiita.com/warspitenavy/',
         },
       ],
