@@ -1,7 +1,7 @@
 <template>
   <v-container tag="article" fluid>
     <title-component title="KonoXa" text="荷物追跡サービス" />
-    <v-container class="pa-6 ma-6">
+    <v-container class="pa-6 ma-6 px-xl-16 mx-auto">
       <konoxa-section-component :section="notificationSection" />
       <konoxa-section-component :section="trackingSection" />
       <konoxa-section-component :section="registSection" />
