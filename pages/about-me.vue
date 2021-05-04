@@ -13,7 +13,7 @@
         <img
           src="/about-me/icon01.png"
           alt="profile icon"
-          style="max-width: 100%"
+          style="max-width: 60%"
       /></v-col>
       <v-col class="d-flex align-center justify-center mb-4" cols="12">
         <h3 class="text-h4 text-sm-h2 white--text text-capitalize">leon</h3>

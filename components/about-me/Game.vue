@@ -9,7 +9,7 @@
           <v-list-item v-for="(e, index) in game" :key="index">
             <v-list-item-content>
               <v-list-item-title
-                class="text-h6 mb-4"
+                class="text-h6 mb-2"
                 v-text="e.title"
               ></v-list-item-title>
               <img :src="e.image" style="width: 100%; border-radius: 1em" />
@@ -26,6 +26,7 @@ import Vue from 'vue'
 export default Vue.extend({
   data() {
     return {
+      dialog: false,
       game: [
         {
           title: 'THE iDOLM@STER SHINY COLORS',
