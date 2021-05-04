@@ -21,7 +21,7 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
-      <v-dialog v-model="dialog" max-width="60%">
+      <v-dialog v-model="dialog">
         <v-img :src="dialogImage" />
       </v-dialog>
     </v-card-text>
