@@ -6,17 +6,24 @@
     <v-card-text>
       <v-list>
         <v-list-item-group>
-          <v-list-item v-for="(e, index) in game" :key="index">
+          <v-list-item
+            v-for="(e, index) in game"
+            :key="index"
+            @click="
+              dialogImage = e.image
+              dialog = true
+            "
+          >
             <v-list-item-content>
-              <v-list-item-title
-                class="text-h6 mb-2"
-                v-text="e.title"
-              ></v-list-item-title>
+              <v-list-item-title class="text-h6 mb-2" v-text="e.title" />
               <img :src="e.image" style="width: 100%; border-radius: 1em" />
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
       </v-list>
+      <v-dialog v-model="dialog" max-width="60%">
+        <v-img :src="dialogImage" />
+      </v-dialog>
     </v-card-text>
   </v-card>
 </template>
@@ -27,6 +34,7 @@ export default Vue.extend({
   data() {
     return {
       dialog: false,
+      dialogImage: '',
       game: [
         {
           title: 'THE iDOLM@STER SHINY COLORS',
@@ -39,6 +47,11 @@ export default Vue.extend({
         { title: 'Minecraft', image: '/about-me/mc.jpg' },
       ],
     }
+  },
+  methods: {
+    conl() {
+      console.log('conl')
+    },
   },
 })
 </script>
