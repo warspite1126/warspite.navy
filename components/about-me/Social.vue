@@ -15,7 +15,7 @@
             <v-icon large v-text="e.icon"></v-icon>
           </v-list-item-icon>
           <v-list-item-icon v-if="e.origIcon">
-            <img :src="e.origIcon" style="width: 36px" />
+            <img :src="e.origIcon" style="width: 36px; height: 36px" />
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title
