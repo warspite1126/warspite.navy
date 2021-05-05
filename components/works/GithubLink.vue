@@ -1,6 +1,6 @@
 <template>
   <v-col tag="section" cols="12" class="text-center">
-    <h3 class="text-h3 mb-4">Github Repository</h3>
+    <h3 class="text-h3 mb-4">リポジトリ</h3>
     <v-card max-width="24em" class="mx-auto" :href="link" target="blank">
       <v-card-title class="justify-center">
         <v-icon x-large>mdi-github</v-icon>

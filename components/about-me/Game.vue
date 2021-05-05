@@ -15,7 +15,8 @@
             "
           >
             <v-list-item-content>
-              <v-list-item-title class="text-h6 mb-2" v-text="e.title" />
+              <!-- <p v-text="e.title"></p> -->
+              <p class="text-body-1 text-sm-h6 mb-2" v-text="e.title" />
               <img :src="e.image" style="width: 100%; border-radius: 1em" />
             </v-list-item-content>
           </v-list-item>

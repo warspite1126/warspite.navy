@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-card-title class="justify-center text-h5 text-capitalize"
-      >social</v-card-title
+      >Account</v-card-title
     >
     <v-list>
       <v-list-item-group>

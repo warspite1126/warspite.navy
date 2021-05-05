@@ -1,10 +1,10 @@
 <template>
   <v-container class="pa-6">
     <v-row justify="center">
-      <v-col cols="12" sm="9" md="8" lg="7" xl="6">
+      <v-col cols="12" sm="9" md="8" lg="7" xl="6" class="pa-3">
         <img src="/r2_e.jpg" class="media-shadow" style="width: 100%" />
       </v-col>
-      <v-col cols="12" sm="9" md="4" lg="4" xl="3">
+      <v-col cols="12" sm="9" md="4" lg="4" xl="3" class="pa-3">
         <v-card>
           <v-card-title class="text-capitalize justify-center text-h5"
             >news</v-card-title

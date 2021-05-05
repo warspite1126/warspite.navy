@@ -4,7 +4,7 @@
       <v-card
         v-for="(e, index) in works"
         :key="index"
-        class="ma-2"
+        class="ma-3"
         min-width="0%"
         width="22em"
         min-height="0%"
