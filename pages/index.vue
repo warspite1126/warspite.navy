@@ -43,6 +43,11 @@ export default {
     return {
       news: [
         {
+          title: 'Yanwen対応',
+          date: '2021.05.29',
+          link: '/works/konoxa',
+        },
+        {
           title: 'ColumbaLivia完成',
           date: '2021.04.20',
           link: '/works/columba-livia',
